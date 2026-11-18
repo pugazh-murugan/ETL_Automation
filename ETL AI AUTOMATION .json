@@ -1,0 +1,185 @@
+{
+  "name": "ETL AI AUTOMATION",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "CSV Upload",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "data",
+              "fieldType": "file",
+              "multipleFiles": false
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        0,
+        0
+      ],
+      "id": "24b83dcd-4844-4754-9340-f5b1665a10ef",
+      "name": "Excel Upload",
+      "webhookId": "1b4d5a26-f4da-417b-88c2-663153e807cb"
+    },
+    {
+      "parameters": {
+        "operation": "xlsx",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "1562f55d-c2da-4f69-acd9-5ddaf5f06b2f",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Clean and standardize this student record. Fix name capitalization, trim spaces, and standardize dates. Return ONLY valid JSON with the same keys, no extra text.\n\n{{ JSON.stringify($json) }}",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        448,
+        0
+      ],
+      "id": "61722e2a-bb0e-4f38-b080-285b650b7e29",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5.4-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-5.4-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        384,
+        208
+      ],
+      "id": "a0660fef-b80b-4802-8692-501020302fdf",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "TED0HE9SAcCfB73u",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return $input.all().map(item => {\n  let out;\n  try {\n    const clean = item.json.text.replace(/```json|```/g, '').trim();\n    out = JSON.parse(clean);\n  } catch (e) {\n    out = { error: 'parse failed', raw: item.json.text };\n  }\n  return { json: out };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        816,
+        0
+      ],
+      "id": "1e0a319c-2cf3-4754-b782-5e29cffc5d5a",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "options": {
+          "fileName": "cleaned_students.csv"
+        }
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.2,
+      "position": [
+        1040,
+        0
+      ],
+      "id": "a201df36-4b52-4f48-a3ab-1af47f5c79a9",
+      "name": "Convert to File"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Excel Upload": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "64903fb7-985d-4298-bef8-19701ef8f459",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "aab002b1e2edea5cf20f203194956c534ac1d38629aba2f439e5cece62936784"
+  },
+  "nodeGroups": [],
+  "id": "ebSQFp0ENQ2ip7gr",
+  "tags": []
+}

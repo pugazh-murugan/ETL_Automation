@@ -1,0 +1,53 @@
+student_id,name,email,phone,dept,dob,city,marks,gender
+S001,Arun Kumar,arunkumar@gmail.com,98765 42542,CSE,12-05-2002,coimbatore,abc,Male
+S002,priya sharma,priyasharma@gmail.com,+91-9885893910,Information Tech,07/09/2001,coimbatore,abc,M
+3,RAHUL VERMA,rahulverma@gmail.com,+91-9848870700,IT,2002-11-02,BANGALORE,abc,male
+S004,Sneha  Iyer,snehaiyer@gmail.com,9204615284,IT,2003-01-30,Madurai,NA,Female
+S005,karthik raj,karthikraj@gmail.com,9366746013,ece,2002-11-02,Villupuram,abc,F
+S006,Divya Menon,divyamenon@gmail.com,+91-9832140838,Computer Science,07/09/2001, Trichy ,71,Female
+S007,mohammed ali,mohammedali@gmail.com,12345,Mechanical,2002-11-02,bengaluru,44,male
+8,Anitha R,anithar@gmail.com,12345,Mechanical,15 Aug 2002,BANGALORE,,M
+S009,Vijay Anand,vijayanand@gmail.com,12345,Computer Science,2001/07/23,Villupuram,-5,F
+S010,Lakshmi Narayan,lakshminarayan@gmail.com,12345,cse,12-05-2002,BANGALORE,NA,Male
+S011,Suresh Babu,,98765 43987,IT,15 Aug 2002, Trichy ,40%,F
+S012,Meena Kumari,meenakumari@gmail.com,12345,it,07/09/2001,coimbatore,-5,
+S013,Ganesh P,ganeshp@gmail.com,9529972001,ece,07/09/2001,Bangalore,68%,M
+S014,Deepa Nair,deepanair@gmail.com,9490423179,cse,2002-11-02,chennai,abc,F
+S015,Ravi Teja,raviteja@gmail.com,12345,Computer Science,2002-11-02,Madurai,70,Male
+S016,Harini S,harinis@gmail.com,98765 44362,IT,15 Aug 2002,bengaluru,abc,M
+S017,Naveen Kumar,naveenkumar@gmail.com,98765 44650,ECE,2001/07/23,coimbatore,abc,
+S018,Pooja Reddy,poojareddy@gmail.com,98765 41457,Information Tech,15 Aug 2002,Villupuram,56%,Female
+S019,Manoj Kumar,manojkumar@gmail.com,9491524801,ECE,2003-01-30, Trichy ,70%,male
+S020,Kavitha M,,9801129838,ECE,2003-01-30,BANGALORE,-5,Female
+S021,Sathish J,,12345,cse,2001/07/23,Bangalore,150,Male
+S022,Revathi K,revathik@gmail.com,98765 48771,CSE,12-05-2002,bengaluru,abc,Male
+S023,Prakash Raj,prakashraj@gmail.com,98765 41458,Information Tech,15 Aug 2002,chennai,abc,Male
+S024,Nandhini T,,12345,IT,2001/07/23,Salem,abc,Male
+S025,Arjun Singh,arjunsingh@gmail.com,+91-9810527808,Computer Science,07/09/2001,Bangalore,abc,Female
+S026,Swathi B,swathib@gmail.com,+91-9824241764,Computer Science,07/09/2001,Villupuram,52,
+S027,Dinesh Kumar,dineshkumar@gmail.com,+91-9853703122,IT,2003-01-30,Salem,NA,female
+S028,Janani V,jananiv@gmail.com,12345,Mechanical,15 Aug 2002,bengaluru,48,F
+S029,Bala Murugan,balamurugan@gmail.com,98765 43530,ECE,2002-11-02,bengaluru,56%,F
+S030,Ishwarya L,ishwaryal@gmail.com,12345,ECE,15 Aug 2002,Madurai,,F
+31,Tamil Selvan,tamilselvan@gmail.com,12345,IT,12-05-2002,bengaluru,abc,male
+S032,Gayathri P,gayathrip@gmail.com,98765 45351,Electronics,2001/07/23,coimbatore,-5,Male
+S033,Rajesh Khanna,rajeshkhanna@gmail.com,12345,CSE,2002-11-02,BANGALORE,84,male
+S034,Sowmiya D,sowmiyadgmail.com,9781224235,Electronics,12-05-2002,Villupuram,94%,M
+35,Hari Prasad,hariprasad@gmail.com,9387612212,cse,15 Aug 2002,Bangalore,85%,M
+S036,Bhavana S,bhavanas@gmail.com,12345,ece,12-05-2002,chennai,83%,male
+37,Kiran Kumar,kirankumargmail.com,+91-9879019441,it,2003-01-30,Villupuram,150,
+S038,Yamini R,yaminir@gmail.com,98765 44761,it,2001/07/23,coimbatore,150,Female
+S039,Vignesh M,vigneshm@gmail.com,12345,MECH,07/09/2001,chennai,50,Female
+S040,Aishwarya N,,12345,IT,15 Aug 2002,Chennai,,male
+41,Santhosh K,santhoshk@gmail.com,12345,it,2001/07/23,Chennai,,female
+S042,Preethi A,preethiagmail.com,9196371976,it,2001/07/23,bengaluru,,male
+S043,Mani Kandan,manikandan@gmail.com,98765 47381,Civil,07/09/2001,BANGALORE,71%,male
+44,Shalini G,shalinig@gmail.com,+91-9867612248,Information Tech,12-05-2002, Trichy ,-5,female
+S045,Surya Prakash,suryaprakash@gmail.com,9790297669,Computer Science,2003-01-30,Villupuram,150,male
+S046,Keerthana V,keerthanav@gmail.com,98765 49016,Civil,07/09/2001,Salem,-5,M
+47,Ashok Kumar,ashokkumar@gmail.com,98765 42219,ECE,2002-11-02,Villupuram,-5,Male
+S048,Thilaga R,thilagar@gmail.com,+91-9848563325,Electronics,2002-11-02,chennai,78%,male
+S049,Imran Khan,imrankhangmail.com,+91-9846074069,IT,15 Aug 2002,Villupuram,,Female
+S050,Ramya S,ramyas@gmail.com,9689566415,Computer Science,07/09/2001,Villupuram,,F
+3,RAHUL VERMA,rahulverma@gmail.com,+91-9848870700,IT,2002-11-02,BANGALORE,abc,male
+S010,Lakshmi Narayan,lakshminarayan@gmail.com,12345,cse,12-05-2002,BANGALORE,NA,Male
