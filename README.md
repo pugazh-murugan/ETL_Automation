@@ -14,6 +14,7 @@ ETL_Automation/
 ├── students_clean.csv                   # Output produced by the pipeline
 ├── ETL AI AUTOMATION .json              # n8n workflow: Excel upload -> LLM clean -> file
 ├── ETL AI AUTOMATION Condition.json     # n8n workflow: CSV upload with file-type check, batching, de-duplication
+├── requirements.txt                     # Python dependencies
 ├── .env                                 # OPENAI_API_KEY (local only, git-ignored)
 ├── .gitignore
 ├── .gitattributes
@@ -60,7 +61,7 @@ Import either file in n8n via **Workflows -> Import from File**, then attach you
 ```bash
 python -m venv .venv
 .venv\Scripts\activate          # Windows
-pip install pandas python-dotenv openai
+pip install -r requirements.txt
 ```
 
 Create a `.env` file in the project root:
